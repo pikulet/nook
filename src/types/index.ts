@@ -2,6 +2,21 @@
 
 export type NoteMode = "freeform" | "checklist";
 
+export type NoteShape =
+  | "straight"
+  | "soft"
+  | "curled"
+  | "tilted-left"
+  | "tilted-right";
+
+export const NOTE_SHAPES: NoteShape[] = [
+  "straight",
+  "soft",
+  "curled",
+  "tilted-left",
+  "tilted-right",
+];
+
 export type NoteColor =
   | "yellow"
   | "green"
@@ -20,6 +35,7 @@ export interface Note {
   id: string;
   mode: NoteMode;
   color: NoteColor;
+  shape: NoteShape;
   content: string;
   items: ChecklistItem[];
   x: number;

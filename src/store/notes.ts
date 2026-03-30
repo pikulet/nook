@@ -1,7 +1,8 @@
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
 import { v4 as uuidv4 } from "uuid";
-import type { Note, NoteColor, NoteMode, ChecklistItem } from "@/types";
+import type { Note, NoteColor, NoteMode, NoteShape, ChecklistItem } from "@/types";
+import { NOTE_SHAPES } from "@/types";
 
 interface NotesStore {
   notes: Note[];
@@ -29,6 +30,7 @@ export const useNotesStore = create<NotesStore>()(
           id: uuidv4(),
           mode: "freeform",
           color: "yellow",
+          shape: NOTE_SHAPES[Math.floor(Math.random() * NOTE_SHAPES.length)],
           content: "",
           items: [],
           x: 100 + Math.random() * 200,
@@ -110,6 +112,20 @@ export const useNotesStore = create<NotesStore>()(
         }));
       },
     }),
-    { name: "nook-notes" }
+    {
+      name: "nook-notes",
+      version: 1,
+      migrate(persisted: unknown, version: number) {
+        const state = persisted as { notes: Note[]; maxZIndex: number };
+        if (version === 0) {
+          // Backfill shape for notes created before shape was added
+          state.notes = state.notes.map((n) => ({
+            ...n,
+            shape: n.shape ?? NOTE_SHAPES[Math.floor(Math.random() * NOTE_SHAPES.length)],
+          }));
+        }
+        return state;
+      },
+    }
   )
 );

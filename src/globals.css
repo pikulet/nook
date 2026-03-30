@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Quicksand:wght@400;500;600&family=Fira+Code:wght@400;500&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +16,8 @@
   --color-border: rgba(0, 0, 0, 0.08);
 
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", monospace;
+  --font-mono: "Fira Code", monospace;
+  --font-note: "Quicksand", sans-serif;
 }
 
 /* ── Dark theme ─────────────────────────────────────────────── */
