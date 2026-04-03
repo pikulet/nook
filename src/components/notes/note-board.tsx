@@ -53,14 +53,18 @@ function useWelcomeNotes() {
   }, [hydrated]);
 }
 
-export function NoteBoard() {
+interface NoteBoardProps {
+  trashRef: React.RefObject<HTMLDivElement | null>;
+}
+
+export function NoteBoard({ trashRef }: NoteBoardProps) {
   const { notes } = useNoteBoard();
   useWelcomeNotes();
 
   return (
     <div className="absolute inset-0 z-10 pointer-events-none [&>*]:pointer-events-auto">
       {notes.map((note) => (
-        <StickyNote key={note.id} id={note.id} />
+        <StickyNote key={note.id} id={note.id} trashRef={trashRef} />
       ))}
     </div>
   );

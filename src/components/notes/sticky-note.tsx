@@ -3,7 +3,7 @@ import { Rnd } from "react-rnd";
 import { motion } from "framer-motion";
 import { X } from "lucide-react";
 import { useNote } from "@/hooks/use-note";
-import { getNoteColors } from "@/lib/note-colors";
+import { getNoteColorsForTheme } from "@/lib/note-colors";
 import { NoteModeToggle } from "@/components/notes/note-mode-toggle";
 import { ChecklistBody } from "@/components/notes/checklist-body";
 import { useSettingsStore } from "@/store/settings";
@@ -12,18 +12,19 @@ import type { NoteShape } from "@/types";
 import { NOTE_SHAPES } from "@/types";
 
 const shapeStyles: Record<NoteShape, { borderRadius: string; rotate?: string }> = {
-  straight: { borderRadius: "2px" },
-  soft: { borderRadius: "10px 10px 3px 10px" },
-  curled: { borderRadius: "3px 3px 14px 3px" },
-  "tilted-left": { borderRadius: "4px", rotate: "-1.5deg" },
-  "tilted-right": { borderRadius: "4px", rotate: "1.5deg" },
+  straight: { borderRadius: "0px" },
+  soft: { borderRadius: "0px" },
+  curled: { borderRadius: "0px" },
+  "tilted-left": { borderRadius: "0px", rotate: "-1.5deg" },
+  "tilted-right": { borderRadius: "0px", rotate: "1.5deg" },
 };
 
 interface StickyNoteProps {
   id: string;
+  trashRef: React.RefObject<HTMLDivElement | null>;
 }
 
-export function StickyNote({ id }: StickyNoteProps) {
+export function StickyNote({ id, trashRef }: StickyNoteProps) {
   const { note, update, remove, toFront } = useNote(id);
   const theme = useSettingsStore((s) => s.theme);
   const [isHovered, setIsHovered] = useState(false);
@@ -48,7 +49,7 @@ export function StickyNote({ id }: StickyNoteProps) {
 
   if (!note) return null;
 
-  const colors = getNoteColors(note.color);
+  const colors = getNoteColorsForTheme(note.color, theme);
   const shape = shapeStyles[note.shape] ?? shapeStyles[NOTE_SHAPES[Math.abs(note.id.charCodeAt(0)) % NOTE_SHAPES.length]];
 
   return (
@@ -65,6 +66,18 @@ export function StickyNote({ id }: StickyNoteProps) {
       }}
       onDragStop={(_e, d) => {
         setIsDragging(false);
+
+        // Check if note center overlaps trash can
+        if (trashRef?.current) {
+          const rect = trashRef.current.getBoundingClientRect();
+          const cx = d.x + note.width / 2;
+          const cy = d.y + note.height / 2;
+          if (cx >= rect.left && cx <= rect.right && cy >= rect.top && cy <= rect.bottom) {
+            remove();
+            return;
+          }
+        }
+
         const padding = 20;
         const clampedX = Math.max(
           padding - note.width + 40,
@@ -87,30 +100,28 @@ export function StickyNote({ id }: StickyNoteProps) {
       onMouseDown={() => toFront()}
     >
       <motion.div
-        className={cn(
-          "flex flex-col w-full h-full overflow-hidden select-none",
-          isDragging ? "shadow-note-hover" : "shadow-note"
-        )}
+        className="flex flex-col w-full h-full overflow-hidden select-none"
         style={{
           backgroundColor: colors.bg,
-          borderWidth: 1,
-          borderStyle: "solid",
-          borderColor: colors.border,
+          border: "2px solid #1a1a1a",
           color: colors.text,
           borderRadius: shape.borderRadius,
           rotate: shape.rotate,
+          boxShadow: isDragging
+            ? "4px 4px 0px #1a1a1a"
+            : "3px 3px 0px #1a1a1a",
+          imageRendering: "pixelated",
         }}
         onHoverStart={() => setIsHovered(true)}
         onHoverEnd={() => setIsHovered(false)}
-        whileHover={{ scale: 1.01 }}
-        transition={{ type: "spring", stiffness: 400, damping: 30 }}
+        transition={{ duration: 0.1 }}
       >
         {/* Header */}
         <div className="note-drag-handle flex items-center justify-between px-3 py-2 cursor-grab active:cursor-grabbing">
           <div className="flex items-center gap-1.5">
             <div
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: colors.border }}
+              className="w-3 h-3"
+              style={{ backgroundColor: colors.border, border: "1px solid #1a1a1a" }}
             />
             <NoteModeToggle noteId={id} />
           </div>

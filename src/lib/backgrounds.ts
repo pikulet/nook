@@ -4,6 +4,7 @@ export interface BackgroundDescriptor {
   id: BackgroundId;
   label: string;
   gradient: string; // CSS gradient used until real images are added
+  image?: string; // path to background image (overrides gradient)
   audioTrackId: string;
   emoji: string; // visual hint in picker until thumbnails exist
 }
@@ -24,11 +25,12 @@ export const backgrounds: BackgroundDescriptor[] = [
     emoji: "🌿",
   },
   {
-    id: "cafe-corner",
-    label: "café corner",
-    gradient: "linear-gradient(135deg, #6b4a3a 0%, #a0785c 40%, #c4a882 100%)",
+    id: "reading-library",
+    label: "reading library",
+    gradient: "linear-gradient(135deg, #3b2a1a 0%, #5a3d2a 40%, #7a5a3a 100%)",
+    image: "/backgrounds/reading-library.png",
     audioTrackId: "cafe",
-    emoji: "☕",
+    emoji: "📚",
   },
   {
     id: "night-sky",

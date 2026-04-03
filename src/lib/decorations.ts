@@ -1,61 +1,39 @@
+import sleepyCat1 from "@/assets/sprites/sleepy-cat-frame1.png";
+import sleepyCat2 from "@/assets/sprites/sleepy-cat-frame2.png";
+import sleepyCat3 from "@/assets/sprites/sleepy-cat-frame3.png";
+import sleepyCat4 from "@/assets/sprites/sleepy-cat-frame4.png";
+import birdcage1 from "@/assets/sprites/birdcage-frame1.png";
+import birdcage2 from "@/assets/sprites/birdcage-frame2.png";
+import birdcage3 from "@/assets/sprites/birdcage-frame3.png";
+import birdcage4 from "@/assets/sprites/birdcage-frame4.png";
+
 export interface DecorationDescriptor {
   id: string;
-  type: "plant" | "creature";
+  type: "plant" | "creature" | "item";
   label: string;
-  emoji: string;
+  frames: string[];
+  frameDuration: number;
   idleAnimation: string;
   defaultScale: number;
 }
 
 export const decorationDescriptors: DecorationDescriptor[] = [
-  // Plants
   {
-    id: "potted-fern",
-    type: "plant",
-    label: "Potted Fern",
-    emoji: "\uD83C\uDF3F",
-    idleAnimation: "sway",
-    defaultScale: 1,
-  },
-  {
-    id: "succulent",
-    type: "plant",
-    label: "Succulent",
-    emoji: "\uD83E\uDEB4",
+    id: "sleepy-cat",
+    type: "creature",
+    label: "Sleepy Cat",
+    frames: [sleepyCat1, sleepyCat2, sleepyCat3, sleepyCat4],
+    frameDuration: 800,
     idleAnimation: "breathe",
     defaultScale: 1,
   },
   {
-    id: "flower",
-    type: "plant",
-    label: "Flower",
-    emoji: "\uD83C\uDF38",
+    id: "birdcage",
+    type: "creature",
+    label: "Birdcage",
+    frames: [birdcage1, birdcage2, birdcage3, birdcage4],
+    frameDuration: 600,
     idleAnimation: "sway",
-    defaultScale: 1,
-  },
-  // Creatures
-  {
-    id: "cat",
-    type: "creature",
-    label: "Cat",
-    emoji: "\uD83D\uDC31",
-    idleAnimation: "breathe",
-    defaultScale: 1,
-  },
-  {
-    id: "bird",
-    type: "creature",
-    label: "Bird",
-    emoji: "\uD83D\uDC26",
-    idleAnimation: "bob",
-    defaultScale: 1,
-  },
-  {
-    id: "butterfly",
-    type: "creature",
-    label: "Butterfly",
-    emoji: "\uD83E\uDD8B",
-    idleAnimation: "bob",
     defaultScale: 1,
   },
 ];

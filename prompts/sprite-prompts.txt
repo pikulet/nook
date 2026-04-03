@@ -1,0 +1,132 @@
+===== BATCH 1a: Sleepy Cat & Birdcage =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Sleepy Cat: a small curled-up tabby cat on a cushion. Frame 1: sleeping peacefully. Frame 2: tail tip twitches. Frame 3: slow inhale, body slightly rises. Frame 4: exhale, body settles back. Warm orange and cream fur, dark brown cushion.
+
+Row 2 — Birdcage with Singing Bird: an ornate golden birdcage with a small blue songbird inside. Frame 1: bird perched left, beak closed. Frame 2: bird perched left, beak open, one musical note. Frame 3: bird hops to right perch. Frame 4: bird perched right, beak open, two musical notes. Gold cage, teal and cobalt bird.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 1b: Owl & Goldfish =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Tiny Owl on Books: a small round owl sitting on a stack of 3 colorful books. Frame 1: eyes open wide. Frame 2: eyes half-closed. Frame 3: eyes fully closed (blink). Frame 4: eyes open wide again. Brown and cream owl, jewel-toned book spines.
+
+Row 2 — Goldfish Bowl: a round glass fishbowl with a small orange goldfish. Frame 1: fish facing right. Frame 2: fish at top right, small ripple. Frame 3: fish facing left. Frame 4: fish at bottom left, bubble rises. Clear glass with blue water tint, orange fish.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 1c: Firefly Jar =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 1 row. The row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Firefly Jar: a glass mason jar with 2-3 tiny fireflies. Frame 1: all fireflies glowing. Frame 2: top firefly dims, bottom glows bright. Frame 3: middle firefly bright, others dim. Frame 4: all glow softly. Clear glass jar, yellow-green glow, dark interior.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 2a: Lava Lamp & Floating Recipe =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Lava Lamp: a retro lava lamp with a brass base and purple glass body. Frame 1: one large blob at bottom. Frame 2: blob stretches upward. Frame 3: blob splits into two, one rising. Frame 4: top blob near top, new blob forms at bottom. Purple and magenta blobs, warm amber glow.
+
+Row 2 — Floating Old Recipe: an aged parchment scroll hovering with a faint magical aura. Frame 1: scroll tilted slightly left, faint sparkle top-right. Frame 2: scroll level, sparkle moves to left. Frame 3: scroll tilted slightly right, sparkle at bottom. Frame 4: scroll level, two sparkles. Cream parchment, brown edges, golden sparkles.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 2b: Tea Cup & Snow Globe =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Steaming Tea Cup: a ceramic tea cup on a small saucer with rising steam. Frame 1: one wisp of steam curling right. Frame 2: steam wisp taller, curling left. Frame 3: two wisps, one fading. Frame 4: fresh wisp starting. Teal cup with gold rim, warm brown tea visible.
+
+Row 2 — Enchanted Snow Globe: a glass snow globe on an ornate wooden base showing a tiny pine tree inside. Frame 1: snow particles scattered. Frame 2: snow swirling clockwise. Frame 3: snow concentrated at top. Frame 4: snow falling down gently. Glass dome, dark wood base with gold trim, white snow, green mini tree.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 2c: Candelabra =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 1 row. The row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Flickering Candelabra: a three-armed ornate brass candelabra with lit candles. Frame 1: all flames upright. Frame 2: left flame leans right, others steady. Frame 3: middle flame tall, side flames small. Frame 4: all flames lean left slightly. Warm gold brass, orange and yellow flames, red candles.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 3a: Terrarium & Mushrooms =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Hanging Terrarium: a round glass orb terrarium hanging from a small brass chain, containing a tiny fern. Frame 1: fern still, one dewdrop on glass. Frame 2: dewdrop slides down slightly. Frame 3: dewdrop at bottom, fern leaf shifts. Frame 4: dewdrop gone, fern settles. Clear glass orb, emerald fern, brass chain.
+
+Row 2 — Glowing Mushroom Cluster: 3 fantasy mushrooms of varying sizes on a mossy base. Frame 1: all caps glow softly. Frame 2: tallest mushroom glows bright, tiny spore floats up. Frame 3: middle mushroom bright, two spores rising. Frame 4: smallest bright, spores fading at top. Purple and teal caps, green moss, golden spore particles.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 3b: Succulent & Vine =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Potted Succulent with Fairy: a small potted succulent with a tiny winged fairy sitting on one leaf. Frame 1: fairy sitting, wings folded. Frame 2: fairy sitting, wings half-open. Frame 3: wings fully spread, tiny sparkle. Frame 4: wings closing, sparkle fades. Jade green succulent, terracotta pot, fairy in soft pink with iridescent wings.
+
+Row 2 — Vine in a Bottle: a clear glass bottle with a curling vine growing inside. Frame 1: vine with 3 leaves. Frame 2: small bud appears at tip. Frame 3: bud opening slightly. Frame 4: tiny flower bloomed, faint glow. Clear bottle, emerald vine, ruby-red tiny flower.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 4a: Crystal Ball & Spell Book =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Crystal Ball: a glass orb on an ornate dark bronze stand with swirling mist inside. Frame 1: mist gathered at center, soft purple glow. Frame 2: mist swirls clockwise, glow shifts blue. Frame 3: mist dispersed, glow bright teal. Frame 4: mist recollects, glow fades to purple. Bronze claw-foot stand, translucent orb.
+
+Row 2 — Floating Spell Book: an open book hovering with faint magic aura, pages gently turning. Frame 1: book open, pages still, faint rune glows on left page. Frame 2: right page lifting. Frame 3: page turning over, rune on right page glows. Frame 4: page settled, both runes glow. Dark leather cover, cream pages, golden and teal rune glow.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 4b: Music Box & Hourglass =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Music Box: an open ornate wooden music box with a tiny spinning ballerina figure. Frame 1: ballerina facing forward, one note floats up. Frame 2: ballerina turned right, note drifts. Frame 3: ballerina facing back, new note appears. Frame 4: ballerina turned left, two notes fading. Dark wood box with gold inlay, pink ballerina, golden musical notes.
+
+Row 2 — Starry Hourglass: an hourglass with glittering golden sand on a small stand. Frame 1: most sand in top, one star-sparkle in falling stream. Frame 2: sand halfway, two sparkles. Frame 3: mostly in bottom, sparkle in stream. Frame 4: nearly empty top, sparkle in bottom pile. Dark wood frame, golden sand, white star-sparkles.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 4c: Quill & Cauldron =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 2 rows. Each row is one decoration sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients.
+
+Row 1 — Self-Writing Quill: a feather quill pen floating above a small parchment, writing by itself. Frame 1: quill poised above paper, ink drop at tip. Frame 2: quill touches paper, stroke appears. Frame 3: quill lifted, small flourish visible. Frame 4: quill dips right, new ink sparkle at tip. White feather quill, cream parchment, dark ink, golden sparkles.
+
+Row 2 — Mini Cauldron: a small black iron cauldron with bubbling potion inside. Frame 1: smooth surface, faint green glow. Frame 2: one bubble rising. Frame 3: bubble pops, colored steam wisp. Frame 4: two new bubbles forming. Black iron cauldron, emerald green potion, purple and green steam wisps.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.
+
+
+===== BATCH 5: Bookmark Sprites (sprites 21-25) =====
+
+Generate a pixel art sprite sheet on a solid black (#000000) background with 5 rows. Each row is one small clickable bookmark sprite for a cozy fantasy game, shown as exactly 4 frames side by side (left to right) for animation. Each frame is 64x64 pixels. Detailed 2D pixel art style matching a dark wood fantasy reading nook — rich saturated jewel tones (deep browns, emerald greens, ruby reds, royal purples, golden ambers), visible individual pixels, detailed shading with dithering. The background must be flat solid black with no patterns or gradients. These are small interactive objects that represent web bookmarks/links. Each sprite has a thin 1-2 pixel soft blue (#4A9EE0) glowing outline around the entire object, like a subtle magical aura, to distinguish these as interactive clickable items.
+
+Row 1 — Sealed Letter: a folded parchment letter sealed with a red wax seal stamped with a star emblem. Frame 1: letter resting, seal glowing faintly. Frame 2: seal glows brighter red. Frame 3: seal dims, faint sparkle at edge. Frame 4: back to faint glow. Cream parchment, dark brown edges, ruby red wax seal with golden sparkle.
+
+Row 2 — Rolled Scroll: a small rolled-up scroll tied with a satin ribbon, one end slightly unfurled. Frame 1: ribbon hangs still. Frame 2: ribbon flutters left. Frame 3: ribbon flutters right. Frame 4: ribbon settles. Aged cream parchment, teal ribbon with gold trim, brown wooden scroll ends.
+
+Row 3 — Postcard: an illustrated postcard propped up at a slight angle, with a small stamp in the upper right corner. Frame 1: stamp still, faint shimmer. Frame 2: stamp sparkles brightly. Frame 3: sparkle fades. Frame 4: new sparkle appears at stamp edge. Warm cream card with a tiny painted landscape, colorful stamp in ruby and gold.
+
+Row 4 — Open Envelope: a cream envelope with the flap open and a folded letter peeking out from the top. Frame 1: letter barely visible. Frame 2: letter slides up slightly. Frame 3: letter at highest point, corner visible. Frame 4: letter slides back down. Cream envelope with dark brown liner, golden letter edge visible.
+
+Row 5 — Magic Portal Book: a small ornate leather-bound book lying open, revealing a tiny swirling portal of light inside the pages. Frame 1: portal small and calm, soft teal glow. Frame 2: portal expands, glow brightens. Frame 3: portal swirls with tiny star particles. Frame 4: portal calms back down. Dark leather cover with gold filigree, teal and purple portal glow, golden star particles.
+
+Solid black (#000000) background everywhere outside the sprites. No transparency pattern, no checkerboard. Clean pixel edges. Each frame clearly separated with consistent 64x64 grid alignment. Exactly 4 frames per row, no more.

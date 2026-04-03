@@ -64,7 +64,13 @@ export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
                 whileHover={{ scale: 1.08 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <span className="text-2xl">{d.emoji}</span>
+                <img
+                  src={d.frames[0]}
+                  alt={d.label}
+                  className="w-10 h-10 object-contain"
+                  style={{ imageRendering: "pixelated" }}
+                  draggable={false}
+                />
                 <span className="text-xs text-text-muted">{d.label}</span>
               </motion.button>
             ))}

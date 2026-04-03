@@ -64,7 +64,7 @@ export function SettingsPanel({ open, onClose }: SettingsPanelProps) {
       </section>
 
       {/* Sound */}
-      <section className="py-4">
+      <section className="border-b border-border py-4">
         <h3 className="mb-2 text-xs uppercase tracking-wider text-text-muted">
           sound
         </h3>
@@ -107,6 +107,19 @@ export function SettingsPanel({ open, onClose }: SettingsPanelProps) {
             <span className="text-xs text-text">sound enabled</span>
           </label>
         </div>
+      </section>
+
+      {/* Ko-fi */}
+      <section className="py-4">
+        <a
+          href="https://ko-fi.com/joyceyeo"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex items-center gap-2 text-xs text-text-muted hover:text-text transition-colors duration-150"
+        >
+          <span>☕</span>
+          <span>buy me a coffee</span>
+        </a>
       </section>
     </Panel>
   );

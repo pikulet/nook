@@ -52,12 +52,12 @@ export interface Note {
 export type BackgroundId =
   | "rainy-window"
   | "forest-desk"
-  | "cafe-corner"
+  | "reading-library"
   | "night-sky";
 
 export interface Decoration {
   id: string;
-  type: "plant" | "creature";
+  type: "plant" | "creature" | "item";
   spriteId: string;
   x: number;
   y: number;
@@ -68,6 +68,19 @@ export interface Decoration {
 export interface SceneConfig {
   backgroundId: BackgroundId;
   decorations: Decoration[];
+}
+
+// ── Bookmark ────────────────────────────────────────────────────────────────
+
+export interface Bookmark {
+  id: string;
+  url: string;
+  title: string;
+  spriteId: string;
+  x: number;
+  y: number;
+  scale: number;
+  zIndex: number;
 }
 
 // ── Audio ────────────────────────────────────────────────────────────────────

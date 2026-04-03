@@ -15,7 +15,11 @@ export function Background() {
       <motion.div
         key={bg.id}
         className="absolute inset-0"
-        style={{ background: bg.gradient }}
+        style={{
+          background: bg.image
+            ? `url(${bg.image}) center/cover no-repeat`
+            : bg.gradient,
+        }}
         initial={isTransition ? { opacity: 0 } : { opacity: 1 }}
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}

@@ -15,6 +15,6 @@ export function getAudioTrack(id: string): AudioTrack | undefined {
 export const backgroundToTrack: Record<string, string> = {
   "rainy-window": "rain",
   "forest-desk": "forest",
-  "cafe-corner": "cafe",
+  "reading-library": "cafe",
   "night-sky": "night",
 };

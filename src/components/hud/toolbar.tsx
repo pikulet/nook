@@ -7,11 +7,13 @@ import { useNotesStore } from "@/store/notes";
 import { IconButton } from "@/components/ui/icon-button";
 import { VolumeControl } from "@/components/hud/volume-control";
 import { DecorationPicker } from "@/components/hud/decoration-picker";
+// import { BookmarkPicker } from "@/components/hud/bookmark-picker";
 import { SettingsPanel } from "@/components/hud/settings-panel";
 
 export function Toolbar() {
   const addNote = useNotesStore((s) => s.addNote);
   const [decorationPickerOpen, setDecorationPickerOpen] = useState(false);
+  // const [bookmarkPickerOpen, setBookmarkPickerOpen] = useState(false);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
   useAmbient();
@@ -29,6 +31,10 @@ export function Toolbar() {
         open={decorationPickerOpen}
         onClose={() => setDecorationPickerOpen(false)}
       />
+      {/* <BookmarkPicker
+        open={bookmarkPickerOpen}
+        onClose={() => setBookmarkPickerOpen(false)}
+      /> */}
       <SettingsPanel
         open={settingsOpen}
         onClose={() => setSettingsOpen(false)}
@@ -50,6 +56,11 @@ export function Toolbar() {
           label="Add decoration"
           onClick={() => setDecorationPickerOpen(!decorationPickerOpen)}
         />
+        {/* <IconButton
+          icon={Link}
+          label="Add bookmark"
+          onClick={() => setBookmarkPickerOpen(!bookmarkPickerOpen)}
+        /> */}
         <div className="w-px h-5 bg-border mx-1" />
         <VolumeControl />
         <div className="w-px h-5 bg-border mx-1" />
