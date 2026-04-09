@@ -67,10 +67,10 @@ export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
                 type="button"
                 onClick={() => setActiveCategory(cat)}
                 className={cn(
-                  "flex-1 text-xs py-1.5 px-2 rounded-lg transition-colors duration-150",
+                  "flex-1 py-2 rounded-lg text-lg transition-colors duration-150 border",
                   activeCategory === cat
-                    ? "bg-accent-soft text-accent font-medium"
-                    : "text-text-muted hover:bg-accent-soft/30"
+                    ? "bg-accent text-white border-accent shadow-sm"
+                    : "bg-surface-overlay text-text-muted border-border hover:border-accent/50"
                 )}
               >
                 {categoryLabels[cat]}
@@ -79,7 +79,7 @@ export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
           </div>
 
           {/* Sprite grid */}
-          <div className="grid grid-cols-4 gap-2">
+          <div className="grid grid-cols-4 gap-2 max-h-[280px] overflow-y-auto">
             {filtered.map((d) => (
               <motion.button
                 key={d.id}
