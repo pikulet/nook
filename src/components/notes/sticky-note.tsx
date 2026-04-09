@@ -8,8 +8,10 @@ import { NoteModeToggle } from "@/components/notes/note-mode-toggle";
 import { ChecklistBody } from "@/components/notes/checklist-body";
 import { useSettingsStore } from "@/store/settings";
 import { cn } from "@/lib/cn";
-import type { NoteShape } from "@/types";
+import type { NoteColor, NoteShape } from "@/types";
 import { NOTE_SHAPES } from "@/types";
+
+const NOTE_COLORS: NoteColor[] = ["yellow", "green", "blue", "pink", "lavender", "peach"];
 
 const shapeStyles: Record<NoteShape, { borderRadius: string; rotate?: string }> = {
   straight: { borderRadius: "0px" },
@@ -119,9 +121,17 @@ export function StickyNote({ id, trashRef }: StickyNoteProps) {
         {/* Header */}
         <div className="note-drag-handle flex items-center justify-between px-3 py-2 cursor-grab active:cursor-grabbing">
           <div className="flex items-center gap-1.5">
-            <div
-              className="w-3 h-3"
+            <button
+              type="button"
+              aria-label="Change color"
+              className="w-3 h-3 hover:scale-125 transition-transform"
               style={{ backgroundColor: colors.border, border: "1px solid #1a1a1a" }}
+              onClick={(e) => {
+                e.stopPropagation();
+                const idx = NOTE_COLORS.indexOf(note.color);
+                const next = NOTE_COLORS[(idx + 1) % NOTE_COLORS.length];
+                update({ color: next });
+              }}
             />
             <NoteModeToggle noteId={id} />
           </div>

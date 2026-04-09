@@ -40,7 +40,7 @@ export function useAmbient() {
         onplayerror: () => {},
       });
       howl.play();
-      howl.fade(0, volume, 300);
+      howl.fade(0, volume * 0.3, 300);
       howlRef.current = howl;
     } catch {
       // Howl creation failed
@@ -50,7 +50,7 @@ export function useAmbient() {
   // Handle volume changes
   useEffect(() => {
     if (howlRef.current) {
-      howlRef.current.volume(soundEnabled ? volume : 0);
+      howlRef.current.volume(soundEnabled ? volume * 0.3 : 0);
     }
   }, [volume, soundEnabled]);
 
