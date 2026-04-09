@@ -42,7 +42,7 @@ All nook data can be removed by:
 
 ## Contact
 
-If you have questions about this privacy policy, please open an issue at [github.com/joyceyeo/nook](https://github.com/joyceyeo/nook).
+If you have questions about this privacy policy, please open an issue at [github.com/pikulet/nook](https://github.com/pikulet/nook).
 
 ## Changes
 
