@@ -16,6 +16,7 @@ interface NotesStore {
   addChecklistItem: (noteId: string, text: string) => void;
   toggleChecklistItem: (noteId: string, itemId: string) => void;
   removeChecklistItem: (noteId: string, itemId: string) => void;
+  editChecklistItem: (noteId: string, itemId: string, text: string) => void;
 }
 
 export const useNotesStore = create<NotesStore>()(
@@ -105,6 +106,22 @@ export const useNotesStore = create<NotesStore>()(
               ? {
                   ...n,
                   items: n.items.filter((i) => i.id !== itemId),
+                  updatedAt: Date.now(),
+                }
+              : n
+          ),
+        }));
+      },
+
+      editChecklistItem: (noteId, itemId, text) => {
+        set((s) => ({
+          notes: s.notes.map((n) =>
+            n.id === noteId
+              ? {
+                  ...n,
+                  items: n.items.map((i) =>
+                    i.id === itemId ? { ...i, text } : i
+                  ),
                   updatedAt: Date.now(),
                 }
               : n

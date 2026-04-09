@@ -10,7 +10,7 @@ interface ChecklistBodyProps {
 }
 
 export function ChecklistBody({ noteId }: ChecklistBodyProps) {
-  const { note, toggleItem, removeItem, addItem } = useNote(noteId);
+  const { note, toggleItem, removeItem, addItem, editItem } = useNote(noteId);
   const [newItemText, setNewItemText] = useState("");
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -25,7 +25,7 @@ export function ChecklistBody({ noteId }: ChecklistBodyProps) {
   }
 
   return (
-    <div className="flex flex-col gap-1 overflow-y-auto flex-1">
+    <div className="flex flex-col gap-1 overflow-y-auto flex-1" onMouseDown={(e) => e.stopPropagation()}>
       <AnimatePresence initial={false}>
         {note.items.map((item) => (
           <motion.div
@@ -40,14 +40,23 @@ export function ChecklistBody({ noteId }: ChecklistBodyProps) {
               checked={item.checked}
               onChange={() => toggleItem(item.id)}
             />
-            <span
+            <textarea
+              defaultValue={item.text}
+              onChange={(e) => {
+                editItem(item.id, e.target.value);
+                e.target.style.height = "auto";
+                e.target.style.height = e.target.scrollHeight + "px";
+              }}
+              onFocus={(e) => {
+                e.target.style.height = "auto";
+                e.target.style.height = e.target.scrollHeight + "px";
+              }}
+              rows={1}
               className={cn(
-                "flex-1 text-base leading-snug font-note tracking-wide",
+                "flex-1 text-base leading-snug font-note tracking-wide bg-transparent outline-none resize-none overflow-hidden",
                 item.checked && "line-through opacity-40"
               )}
-            >
-              {item.text}
-            </span>
+            />
             <button
               type="button"
               aria-label="Remove item"

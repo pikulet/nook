@@ -10,6 +10,7 @@ export function useNote(id: string) {
   const addChecklistItem = useNotesStore((s) => s.addChecklistItem);
   const toggleChecklistItem = useNotesStore((s) => s.toggleChecklistItem);
   const removeChecklistItem = useNotesStore((s) => s.removeChecklistItem);
+  const editChecklistItem = useNotesStore((s) => s.editChecklistItem);
 
   const update = useCallback(
     (patch: Partial<Note>) => updateNote(id, patch),
@@ -38,6 +39,11 @@ export function useNote(id: string) {
     [id, removeChecklistItem]
   );
 
+  const editItem = useCallback(
+    (itemId: string, text: string) => editChecklistItem(id, itemId, text),
+    [id, editChecklistItem]
+  );
+
   return {
     note,
     update,
@@ -46,5 +52,6 @@ export function useNote(id: string) {
     addItem,
     toggleItem,
     removeItem,
+    editItem,
   };
 }

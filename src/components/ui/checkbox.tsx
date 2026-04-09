@@ -15,7 +15,7 @@ export function Checkbox({ checked, onChange, className }: CheckboxProps) {
       aria-checked={checked}
       onClick={() => onChange(!checked)}
       className={cn(
-        "flex items-center justify-center w-4 h-4 rounded border shrink-0",
+        "flex items-center justify-center w-[18px] h-[18px] rounded border-2 shrink-0",
         "transition-colors duration-150",
         checked
           ? "bg-accent border-accent"
@@ -24,8 +24,8 @@ export function Checkbox({ checked, onChange, className }: CheckboxProps) {
       )}
     >
       <motion.svg
-        width="10"
-        height="10"
+        width="12"
+        height="12"
         viewBox="0 0 10 10"
         initial={false}
         animate={checked ? "checked" : "unchecked"}

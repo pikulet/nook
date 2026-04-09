@@ -1,4 +1,4 @@
-import { memo, useCallback, useEffect, useRef, useState } from "react";
+import { memo, useCallback, useEffect, useRef, useState, type PointerEvent as ReactPointerEvent } from "react";
 import { motion, useMotionValue, AnimatePresence } from "framer-motion";
 import type { Decoration as DecorationType } from "@/types";
 import { getDecorationDescriptor } from "@/lib/decorations";
@@ -127,6 +127,29 @@ export function Decoration({ decoration, trashRef }: DecorationProps) {
     scaleDecoration(decoration.id, decoration.scale - SCALE_STEP);
   }, [decoration.id, decoration.scale, scaleDecoration]);
 
+  // Corner-drag resize
+  const resizeOrigin = useRef<{ pointerX: number; startScale: number } | null>(null);
+
+  const handleResizePointerDown = useCallback((e: ReactPointerEvent) => {
+    e.stopPropagation();
+    e.preventDefault();
+    resizeOrigin.current = { pointerX: e.clientX, startScale: decoration.scale };
+    (e.target as HTMLElement).setPointerCapture(e.pointerId);
+  }, [decoration.scale]);
+
+  const handleResizePointerMove = useCallback((e: ReactPointerEvent) => {
+    if (!resizeOrigin.current) return;
+    const dx = e.clientX - resizeOrigin.current.pointerX;
+    const newScale = resizeOrigin.current.startScale + dx / 120;
+    scaleDecoration(decoration.id, newScale);
+  }, [decoration.id, scaleDecoration]);
+
+  const handleResizePointerUp = useCallback(() => {
+    resizeOrigin.current = null;
+    // Reset so the next click on the decoration correctly toggles selection
+    wasDragged.current = false;
+  }, []);
+
   if (!descriptor) return null;
 
   const spriteWidth = 120 * decoration.scale;
@@ -154,64 +177,47 @@ export function Decoration({ decoration, trashRef }: DecorationProps) {
       animate={preset?.animate}
       transition={preset?.transition}
     >
-      {/* Selection ring */}
-      {selected && (
-        <div
-          className="absolute -inset-1 rounded border-2 border-accent/50 pointer-events-none"
-          style={{ imageRendering: "auto" }}
-        />
-      )}
-
-      <SpriteFrame
-        frames={descriptor.frames}
-        frameDuration={descriptor.frameDuration ?? 800}
-        alt={descriptor.label}
-        width={spriteWidth}
-      />
-
-      {/* Resize controls */}
-      <AnimatePresence>
+      <div className="relative inline-block">
+        {/* Selection ring */}
         {selected && (
-          <motion.div
-            initial={{ opacity: 0, y: 4 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 4 }}
-            transition={{ duration: 0.15 }}
-            className="absolute left-1/2 -translate-x-1/2 flex items-center gap-1"
-            style={{ top: spriteWidth + 4 }}
-          >
-            <button
-              type="button"
-              onClick={handleScaleDown}
-              disabled={decoration.scale <= 0.25}
-              className="flex items-center justify-center w-6 h-6 rounded
-                bg-surface-overlay backdrop-blur-sm border border-border
-                text-text-muted hover:text-text shadow-panel
-                disabled:opacity-30 disabled:cursor-not-allowed
-                transition-colors duration-150"
-            >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                <rect x="1" y="4" width="8" height="2" fill="currentColor" />
-              </svg>
-            </button>
-            <button
-              type="button"
-              onClick={handleScaleUp}
-              disabled={decoration.scale >= 3}
-              className="flex items-center justify-center w-6 h-6 rounded
-                bg-surface-overlay backdrop-blur-sm border border-border
-                text-text-muted hover:text-text shadow-panel
-                disabled:opacity-30 disabled:cursor-not-allowed
-                transition-colors duration-150"
-            >
-              <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
-                <rect x="1" y="4" width="8" height="2" fill="currentColor" />
-                <rect x="4" y="1" width="2" height="8" fill="currentColor" />
-              </svg>
-            </button>
-          </motion.div>
+          <div
+            className="absolute -inset-1 rounded border-2 border-accent/50 pointer-events-none"
+            style={{ imageRendering: "auto" }}
+          />
         )}
-      </AnimatePresence>
+
+        <SpriteFrame
+          frames={descriptor.frames}
+          frameDuration={descriptor.frameDuration ?? 800}
+          alt={descriptor.label}
+          width={spriteWidth}
+        />
+
+        {/* Resize handle (top-right corner drag) */}
+        <AnimatePresence>
+          {selected && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.15 }}
+              onPointerDown={handleResizePointerDown}
+              onPointerMove={handleResizePointerMove}
+              onPointerUp={handleResizePointerUp}
+              className="absolute w-5 h-5 cursor-se-resize flex items-center justify-center"
+              style={{
+                right: -4,
+                top: -4,
+                touchAction: "none",
+              }}
+            >
+              <svg width="12" height="12" viewBox="0 0 12 12" className="text-text-muted drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+                <path d="M2 10L10 2M6 10L10 6" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
+              </svg>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </motion.div>
   );
 }
