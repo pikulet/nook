@@ -1,0 +1,155 @@
+==============================================================================
+NOOK — BACKGROUND PROMPTS
+==============================================================================
+All backgrounds: detailed 2D pixel art, front-facing room interior, 1920×1080,
+rich jewel-tone palette, visible pixels with dithering shading, fantasy
+storybook atmosphere. Designed with clear flat surfaces at varying heights
+for placing 64×64 decoration sprites.
+==============================================================================
+
+
+── 1. READING LIBRARY ─────────────────────────────────────────────────────────
+
+Detailed 2D pixel art, front-facing room interior, 1920×1080, rich jewel-tone
+palette (deep mahogany, emerald, ruby, royal purple, golden amber), warm
+golden-hour lighting from an arched window, visible pixels with dithering
+shading, fantasy storybook atmosphere.
+
+A cozy reading nook library with many clear surfaces for placing small
+decorations:
+
+— LEFT WALL: A tall dark wood bookshelf with 3-4 shelves, some shelves
+  half-empty leaving open flat space. A small wall-mounted floating shelf at
+  mid-height, empty and ready for objects. String fairy lights draped across
+  the top.
+
+— CENTER: A large arched gothic window with teal velvet curtains pulled aside,
+  golden sunset light streaming in. Below the window, a wide wooden window
+  seat / ledge with cushions, leaving flat surface area on both sides.
+
+— RIGHT SIDE: A small round side table with ornate legs, surface empty. Above
+  it, a wall-mounted hanging planter bracket (empty hook). A wooden wall
+  recess / alcove niche at eye level, like a small built-in display shelf.
+
+— FLOOR LEVEL: A worn floral carpet in the center. A low wooden bench or
+  trunk to the far right. A small step stool near the bookshelf.
+
+— UPPER AREA: A ceiling-mounted iron bracket for hanging items. A high corner
+  shelf in the top-right.
+
+All surfaces should be clearly flat and uncluttered — meant to receive 64×64
+pixel decoration sprites. Warm, lived-in feel but intentionally empty "landing
+spots" throughout at varying heights and positions. No characters or creatures.
+
+
+── 2. FOREST DESK ─────────────────────────────────────────────────────────────
+
+Detailed 2D pixel art, front-facing interior, 1920×1080, rich jewel-tone
+palette (moss green, bark brown, amber gold, forest teal), dappled green
+sunlight filtering through leaves, visible pixels with dithering shading,
+fantasy storybook atmosphere.
+
+A treehouse study built into a massive ancient oak tree, the room is open to
+the canopy on one side:
+
+— LEFT SIDE: The curved inner wall of the tree trunk, with natural wooden
+  shelves carved into knots and hollows — 3-4 small recessed alcoves at
+  different heights, flat and empty. A rope-and-plank shelf mounted with
+  iron bolts to the bark wall.
+
+— CENTER: A large worn wooden desk facing a wide opening in the tree wall,
+  looking out at a lush green forest canopy with soft golden light. The desk
+  surface is wide and mostly clear with room for multiple items. A hanging
+  lantern above the desk on a branch hook (unlit, just the bracket).
+
+— RIGHT SIDE: A tall narrow bookshelf made of stacked crates and planks,
+  several shelves half-empty. A tree branch extending inward at mid-height,
+  thick enough to set something on. A small wall-mounted cork board.
+
+— FLOOR LEVEL: Mossy wooden floorboards. A tree stump side table (flat top,
+  empty). A woven basket near the desk leg. A flat stone slab near the
+  entrance serving as a step.
+
+— UPPER AREA: Thick tree branches crossing overhead with hanging hooks — spots
+  for a birdcage or lantern. A high natural shelf where a branch meets the
+  trunk. Leaf canopy framing the top.
+
+Surfaces clearly flat and uncluttered. Organic and natural but with obvious
+landing spots for decoration sprites. No characters or creatures.
+
+
+── 3. NIGHT SKY ───────────────────────────────────────────────────────────────
+
+Detailed 2D pixel art, front-facing interior, 1920×1080, rich jewel-tone
+palette (midnight blue, deep indigo, silver, soft violet, warm amber accents),
+cool moonlight from a large window, visible pixels with dithering shading,
+fantasy storybook atmosphere.
+
+An astronomer's tower room at the top of a stone castle turret, nighttime:
+
+— LEFT WALL: A curved stone wall with a built-in arched bookshelf carved into
+  the masonry — 3 shelves at different heights, partially empty. A small
+  iron wall sconce (unlit bracket). A narrow stone ledge running along the
+  wall at waist height.
+
+— CENTER: A massive arched window open to a starry night sky with a large
+  crescent moon. Deep indigo sky with visible constellations. Below the
+  window, a wide stone window sill — deep and flat, perfect for placing
+  items. A brass telescope on a tripod to one side, leaving the rest of the
+  sill open.
+
+— RIGHT SIDE: A wooden writing desk with dark stained wood, surface mostly
+  clear. A tall narrow cabinet with glass doors, some shelves empty. A
+  hanging iron chandelier bracket from the ceiling (empty hook). A small
+  stone pedestal at mid-height.
+
+— FLOOR LEVEL: Dark stone floor with a circular star-chart rug. A low round
+  table in the corner (flat, empty). A wooden crate half-open near the wall.
+  A small stack of flat stones as a display platform.
+
+— UPPER AREA: The turret ceiling is domed stone with iron brackets at the
+  curve. A high stone shelf near the dome's edge. An ornamental iron ring
+  mounted to the wall for hanging.
+
+Cool blue-silver moonlight with warm amber from scattered candle points.
+Surfaces clearly flat and uncluttered. Mystical, contemplative mood. No
+characters or creatures.
+
+
+── 4. GREENHOUSE ──────────────────────────────────────────────────────────────
+
+Detailed 2D pixel art, front-facing interior, 1920×1080, rich jewel-tone
+palette (emerald green, copper, warm terracotta, golden amber, sage),
+warm diffused sunlight through frosted glass panels, visible pixels with
+dithering shading, fantasy storybook atmosphere.
+
+A magical Victorian greenhouse / conservatory, lush but with clear surfaces:
+
+— LEFT SIDE: A tall wrought-iron plant stand with 3 tiers — each tier is a
+  flat circular platform, currently empty. Behind it, the glass wall panels
+  with green foliage pressing against the outside. A wall-mounted copper
+  shelf bracket at mid-height.
+
+— CENTER: The greenhouse's peaked glass roof lets in warm golden light. A
+  large wooden potting table in the center — wide flat surface, mostly clear
+  with a few empty terracotta pots pushed to one side. Above the table, a
+  hanging rack made of iron bars with S-hooks dangling (empty, ready for
+  hanging items).
+
+— RIGHT SIDE: A weathered wooden cabinet with open shelves — 3 levels, most
+  shelves empty. A stone garden bench with flat seat. A tall iron trellis
+  leaning against the glass wall with nothing climbing it yet. A small
+  recessed niche in the brick half-wall.
+
+— FLOOR LEVEL: Terracotta tile floor with a drainage grate pattern. An
+  overturned wooden crate (flat top). A low stone plinth near the left. A
+  shallow copper tray on the floor.
+
+— UPPER AREA: Iron crossbeams under the glass ceiling with hooks for hanging
+  baskets. A high shelf spanning the back brick wall. Copper pipe brackets
+  along the upper frame.
+
+Warm, humid atmosphere with soft god-rays through the glass. Surfaces clearly
+flat and uncluttered — this is a greenhouse waiting to be filled with the
+user's decorations. No characters, creatures, or potted plants (user places
+those). Existing greenery only visible OUTSIDE the glass walls.
