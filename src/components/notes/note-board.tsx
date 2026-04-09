@@ -62,7 +62,7 @@ export function NoteBoard({ trashRef }: NoteBoardProps) {
   useWelcomeNotes();
 
   return (
-    <div className="absolute inset-0 z-10 pointer-events-none [&>*]:pointer-events-auto">
+    <div className="absolute inset-0 z-20 pointer-events-none [&>*]:pointer-events-auto">
       {notes.map((note) => (
         <StickyNote key={note.id} id={note.id} trashRef={trashRef} />
       ))}

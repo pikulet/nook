@@ -10,7 +10,7 @@ export function DecorationLayer({ trashRef }: DecorationLayerProps) {
   const decorations = useSceneStore((s) => s.decorations);
 
   return (
-    <div className="absolute inset-0 z-20 pointer-events-none">
+    <div className="absolute inset-0 z-10 pointer-events-none">
       {decorations.map((d) => (
         <Decoration key={d.id} decoration={d} trashRef={trashRef} />
       ))}

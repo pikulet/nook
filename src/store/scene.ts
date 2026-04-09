@@ -7,13 +7,14 @@ interface SceneStore extends SceneConfig {
   setBackground: (id: BackgroundId) => void;
   addDecoration: (partial: Omit<Decoration, "id" | "zIndex">) => void;
   moveDecoration: (id: string, x: number, y: number) => void;
+  scaleDecoration: (id: string, scale: number) => void;
   removeDecoration: (id: string) => void;
 }
 
 export const useSceneStore = create<SceneStore>()(
   persist(
     (set, get) => ({
-      backgroundId: "rainy-window",
+      backgroundId: "reading-library",
       decorations: [],
 
       setBackground: (backgroundId) => set({ backgroundId }),
@@ -31,6 +32,14 @@ export const useSceneStore = create<SceneStore>()(
         set((s) => ({
           decorations: s.decorations.map((d) =>
             d.id === id ? { ...d, x, y } : d
+          ),
+        }));
+      },
+
+      scaleDecoration: (id, scale) => {
+        set((s) => ({
+          decorations: s.decorations.map((d) =>
+            d.id === id ? { ...d, scale: Math.max(0.25, Math.min(3, scale)) } : d
           ),
         }));
       },
