@@ -1,6 +1,32 @@
 import { forwardRef } from "react";
 import { motion, useMotionValue } from "framer-motion";
-import { Trash2 } from "lucide-react";
+
+function PixelTrashIcon({ size = 20 }: { size?: number }) {
+  return (
+    <svg
+      width={size}
+      height={size}
+      viewBox="0 0 16 16"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ imageRendering: "pixelated" }}
+    >
+      {/* Lid handle */}
+      <rect x="6" y="1" width="4" height="1" fill="currentColor" />
+      {/* Lid */}
+      <rect x="3" y="2" width="10" height="2" fill="currentColor" />
+      {/* Body left wall */}
+      <rect x="4" y="4" width="1" height="9" fill="currentColor" />
+      {/* Body right wall */}
+      <rect x="11" y="4" width="1" height="9" fill="currentColor" />
+      {/* Body bottom */}
+      <rect x="4" y="13" width="8" height="1" fill="currentColor" />
+      {/* Inner lines */}
+      <rect x="6" y="5" width="1" height="7" fill="currentColor" opacity="0.5" />
+      <rect x="9" y="5" width="1" height="7" fill="currentColor" opacity="0.5" />
+    </svg>
+  );
+}
 
 export const TrashCan = forwardRef<HTMLDivElement>(function TrashCan(_, ref) {
   const x = useMotionValue(
@@ -32,7 +58,7 @@ export const TrashCan = forwardRef<HTMLDivElement>(function TrashCan(_, ref) {
         transition-colors duration-150"
       whileHover={{ scale: 1.1 }}
     >
-      <Trash2 size={20} />
+      <PixelTrashIcon size={22} />
     </motion.div>
   );
 });

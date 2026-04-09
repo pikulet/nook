@@ -50,14 +50,14 @@ export interface Note {
 // ── Scene ────────────────────────────────────────────────────────────────────
 
 export type BackgroundId =
-  | "rainy-window"
-  | "forest-desk"
   | "reading-library"
-  | "night-sky";
+  | "forest-desk"
+  | "night-sky"
+  | "greenhouse";
 
 export interface Decoration {
   id: string;
-  type: "plant" | "creature" | "item";
+  type: "plant" | "creature" | "item" | "magical";
   spriteId: string;
   x: number;
   y: number;

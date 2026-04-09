@@ -31,9 +31,9 @@ export function BackgroundPicker() {
                 "aspect-video overflow-hidden",
                 isActive && "ring-2 ring-accent"
               )}
-              style={{ background: bg.gradient }}
+              style={{ background: `url(${bg.image}) center/cover no-repeat` }}
             >
-              <span className="text-xl">{bg.emoji}</span>
+              <span className="text-xl drop-shadow-md">{bg.emoji}</span>
             </div>
             <span
               className={cn(

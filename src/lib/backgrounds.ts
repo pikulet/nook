@@ -1,43 +1,40 @@
 import type { BackgroundId } from "@/types";
+import bgLibrary from "@/assets/backgrounds/nook_bg_library.png";
+import bgForest from "@/assets/backgrounds/nook_bg_forest.png";
+import bgNightSky from "@/assets/backgrounds/nook_bg_nightsky.png";
+import bgGreenhouse from "@/assets/backgrounds/nook_bg_greenhouse.png";
 
 export interface BackgroundDescriptor {
   id: BackgroundId;
   label: string;
-  gradient: string; // CSS gradient used until real images are added
-  image?: string; // path to background image (overrides gradient)
-  audioTrackId: string;
-  emoji: string; // visual hint in picker until thumbnails exist
+  image: string;
+  emoji: string;
 }
 
 export const backgrounds: BackgroundDescriptor[] = [
   {
-    id: "rainy-window",
-    label: "rainy window",
-    gradient: "linear-gradient(135deg, #4a6274 0%, #6b8ea3 40%, #8fadb8 100%)",
-    audioTrackId: "rain",
-    emoji: "🌧",
+    id: "reading-library",
+    label: "reading library",
+    image: bgLibrary,
+    emoji: "\u{1F4DA}",
   },
   {
     id: "forest-desk",
     label: "forest desk",
-    gradient: "linear-gradient(135deg, #3a5a3a 0%, #5a7d5a 40%, #8aad7a 100%)",
-    audioTrackId: "forest",
-    emoji: "🌿",
-  },
-  {
-    id: "reading-library",
-    label: "reading library",
-    gradient: "linear-gradient(135deg, #3b2a1a 0%, #5a3d2a 40%, #7a5a3a 100%)",
-    image: "/backgrounds/reading-library.png",
-    audioTrackId: "cafe",
-    emoji: "📚",
+    image: bgForest,
+    emoji: "\u{1F33F}",
   },
   {
     id: "night-sky",
     label: "night sky",
-    gradient: "linear-gradient(135deg, #0f1429 0%, #1a2344 40%, #2d3a6a 100%)",
-    audioTrackId: "night",
-    emoji: "🌙",
+    image: bgNightSky,
+    emoji: "\u{1F319}",
+  },
+  {
+    id: "greenhouse",
+    label: "greenhouse",
+    image: bgGreenhouse,
+    emoji: "\u{1F331}",
   },
 ];
 

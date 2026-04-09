@@ -3,6 +3,7 @@ import { useSettingsStore } from "@/store/settings";
 import { Panel } from "@/components/ui/panel";
 import { BackgroundPicker } from "@/components/hud/background-picker";
 import { AccentPicker } from "@/components/hud/accent-picker";
+import { audioTracks } from "@/lib/audio-tracks";
 import type { Theme } from "@/types";
 
 interface SettingsPanelProps {
@@ -19,6 +20,8 @@ export function SettingsPanel({ open, onClose }: SettingsPanelProps) {
   const setSoundEnabled = useSettingsStore((s) => s.setSoundEnabled);
   const volume = useSettingsStore((s) => s.volume);
   const setVolume = useSettingsStore((s) => s.setVolume);
+  const activeTrackId = useSettingsStore((s) => s.activeTrackId);
+  const setActiveTrackId = useSettingsStore((s) => s.setActiveTrackId);
 
   return (
     <Panel open={open} onClose={onClose} title="settings">
@@ -91,6 +94,26 @@ export function SettingsPanel({ open, onClose }: SettingsPanelProps) {
             <span className="w-8 text-right text-xs text-text-muted">
               {Math.round(volume * 100)}
             </span>
+          </div>
+
+          {/* Track selector */}
+          <div className="flex gap-1 rounded-full bg-surface p-1">
+            {audioTracks.map((t) => (
+              <button
+                key={t.id}
+                type="button"
+                onClick={() => setActiveTrackId(t.id)}
+                className={cn(
+                  "flex-1 rounded-full px-3 py-1.5 text-xs font-medium",
+                  "transition-colors duration-150",
+                  t.id === activeTrackId
+                    ? "bg-accent-soft text-text"
+                    : "text-text-muted hover:text-text"
+                )}
+              >
+                {t.label}
+              </button>
+            ))}
           </div>
 
           {/* Mute toggle */}

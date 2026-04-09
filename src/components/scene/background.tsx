@@ -16,9 +16,7 @@ export function Background() {
         key={bg.id}
         className="absolute inset-0"
         style={{
-          background: bg.image
-            ? `url(${bg.image}) center/cover no-repeat`
-            : bg.gradient,
+          background: `url(${bg.image}) center/cover no-repeat`,
         }}
         initial={isTransition ? { opacity: 0 } : { opacity: 1 }}
         animate={{ opacity: 1 }}

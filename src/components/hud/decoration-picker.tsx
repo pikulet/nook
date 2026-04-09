@@ -1,9 +1,12 @@
-import { useCallback } from "react";
+import { useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
 import {
   decorationDescriptors,
+  categoryLabels,
+  categoryOrder,
   type DecorationDescriptor,
+  type DecorationCategory,
 } from "@/lib/decorations";
 import { useSceneStore } from "@/store/scene";
 
@@ -14,6 +17,8 @@ interface DecorationPickerProps {
 
 export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
   const addDecoration = useSceneStore((s) => s.addDecoration);
+  const [activeCategory, setActiveCategory] =
+    useState<DecorationCategory>("creature");
 
   const handleSelect = useCallback(
     (descriptor: DecorationDescriptor) => {
@@ -35,6 +40,10 @@ export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
     [addDecoration, onClose]
   );
 
+  const filtered = decorationDescriptors.filter(
+    (d) => d.type === activeCategory
+  );
+
   return (
     <AnimatePresence>
       {open && (
@@ -47,11 +56,31 @@ export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
             "fixed bottom-[70px] left-1/2 -translate-x-1/2",
             "bg-surface-overlay backdrop-blur-md shadow-panel",
             "rounded-xl border border-border",
-            "p-3 z-50"
+            "p-3 z-50 w-[320px]"
           )}
         >
-          <div className="grid grid-cols-3 gap-2">
-            {decorationDescriptors.map((d) => (
+          {/* Category tabs */}
+          <div className="flex gap-1 mb-3">
+            {categoryOrder.map((cat) => (
+              <button
+                key={cat}
+                type="button"
+                onClick={() => setActiveCategory(cat)}
+                className={cn(
+                  "flex-1 text-xs py-1.5 px-2 rounded-lg transition-colors duration-150",
+                  activeCategory === cat
+                    ? "bg-accent-soft text-accent font-medium"
+                    : "text-text-muted hover:bg-accent-soft/30"
+                )}
+              >
+                {categoryLabels[cat]}
+              </button>
+            ))}
+          </div>
+
+          {/* Sprite grid */}
+          <div className="grid grid-cols-4 gap-2">
+            {filtered.map((d) => (
               <motion.button
                 key={d.id}
                 type="button"
@@ -67,11 +96,10 @@ export function DecorationPicker({ open, onClose }: DecorationPickerProps) {
                 <img
                   src={d.frames[0]}
                   alt={d.label}
-                  className="w-10 h-10 object-contain"
+                  className="w-12 h-12 object-contain"
                   style={{ imageRendering: "pixelated" }}
                   draggable={false}
                 />
-                <span className="text-xs text-text-muted">{d.label}</span>
               </motion.button>
             ))}
           </div>
